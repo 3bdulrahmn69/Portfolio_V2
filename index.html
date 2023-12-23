@@ -31,8 +31,9 @@
         <i class="fa-solid fa-bars"></i>
     </div>
     <div class="sm:w-11/12 w-12/12">
-        <main>
-            <section id="home" aria-label="My Card" class="flex flex-col justify-center items-center gap-5">
+        <main class="h-screen overflow-y-scroll snap-y snap-mandatory">
+            <section id="home" aria-label="My Card"
+                class="flex flex-col justify-center items-center gap-5 bg-blue-950 text-white h-screen overflow-hidden px-4 snap-start">
                 <div class="border-2 rounded-lg p-2 flex items-center justify-center gap-3 sm:flex-row flex-col">
                     <div class="w-48 h-48">
                         <img src="assets/icons/Mev-icon.png" alt="My Picture" width="250" height="250">
@@ -60,8 +61,7 @@
                 </div>
             </section>
             <section id="about-me" aria-label="About Me"
-                class="flex sm:flex-row flex-col items-center justify-center gap-2 sm:py-4 py-2">
-
+                class="flex sm:flex-row flex-col items-center justify-center gap-2 sm:py-4 py-2 bg-blue-900 text-white h-screen overflow-hidden px-4 snap-start">
                 <article class="w-4/12 h-4/5 sm:block hidden">
                     <h2 class="font-light text-4xl text-center uppercase tracking-wider pb-4">Skills</h2>
                     <h3 class="py-1 text-3xl uppercase">Frontend:</h3>
@@ -136,15 +136,13 @@
                         </ul>
                     </div>
                 </article>
-
                 <hr class="border-2 h-3/6 self-center mx-16 sm:block hidden">
-
                 <article class="lg:w-8/12 w-full sm:h-4/5 h-full">
                     <h2 class="font-light text-4xl text-center uppercase tracking-wider pb-4">Brief</h2>
                     <div class="w-full">
                         <p class="lg:text-xl text-sm">
                             Hello there! I'm <span
-                                class="uppercase tracking-wide text-yellow-600 lg:text-2xl text-xl">Abdelrahman
+                                class="uppercase tracking-wide text-blue-300 lg:text-2xl text-xl">Abdelrahman
                                 Moussa</span>, a passionate frontend developer on a mission to craft exceptional user
                             experiences. Proficient in HTML, CSS, and JavaScript, I've honed my skills through hands-on
                             experiences, notably spearheading the development of an E-commerce website with an Admin
@@ -177,12 +175,11 @@
                         </p>
                     </div>
                 </article>
-
             </section>
             <section id="my-works" aria-label="My Works"
-                class="flex sm:flex-row flex-col justify-center items-center py-2 sm:gap-4">
+                class="flex sm:flex-row flex-col justify-center items-center py-2 sm:gap-4 bg-blue-800 text-white h-screen overflow-hidden px-4 snap-start">
                 <div class="card">
-                    <h3 class="text-center text-2xl">E-Store</h3>
+                    <h3 class="text-center text-2xl text-nowrap">E-Store</h3>
                     <img src="assets/screenshots/EStore.png" alt="E-Store" class="w-full">
                     <p>HTML, CSS, JavaScript</p>
                     <div class="links">
@@ -191,29 +188,32 @@
                     </div>
                 </div>
                 <div class="card">
-                    <h3 class="text-center text-2xl">Youtube Clone</h3>
+                    <h3 class="text-center text-2xl text-nowrap">Youtube Clone</h3>
                     <img src="assets/screenshots/Youtube.png" alt="Youtube" class="w-full">
-                    <p>React js, CSS, Axios</p>
+                    <p>React js, Axios, Material UI, Rapid API</p>
                     <div class="links">
                         <a href="https://abdelrahman69-youtube.netlify.app/" target="_blank">Live Demo</a>
                         <a href="https://github.com/abdulrahmn69/youtube_clone_v2" target="_blank">GitHub Code</a>
                     </div>
                 </div>
             </section>
-
-            <section id="contact-me" aria-label="Contact Me" class="flex justify-center items-center">
-                <form name="contact" method="post" netlify onSubmit="submit">
+            <section id="contact-me" aria-label="Contact Me"
+                class="flex justify-center items-center bg-blue-700 text-white h-screen overflow-hidden px-4 snap-start">
+                <form name="contact" method="post" netlify onSubmit="submit" action="/email.html/" class="w-full">
                     <input type="hidden" name="form-name" value="contact" />
-                    <div class="flex flex-col justify-center items-center gap-2">
-                        <h2 class="text-4xl font-light">Contact Me</h2>
-                        <div class="flex flex-col justify-center items-center gap-2">
-                            <input type="text" name="name" placeholder="Name"
-                                class="w-96 h-12 px-4 rounded-lg text-black" required>
-                            <input type="email" name="email" placeholder="Email"
-                                class="w-96 h-12 px-4 rounded-lg text-black" required>
-                            <textarea name="message" placeholder="Message" class="w-96 h-32 px-4 rounded-lg text-black"
-                                style="resize: none;" required></textarea>
-                            <button type="submit" class="w-96 h-12 px-4 rounded-lg bg-yellow-600 text-white">Send
+                    <div class="flex flex-col justify-center items-center gap-2 w-full">
+                        <i class="fa-regular fa-envelope text-4xl text-center"></i>
+                        <h2 class="text-4xl font-light uppercase text-center">Feel Free to Contact Me</h2>
+                        <div class="flex flex-col justify-center items-center gap-2 w-full">
+                            <input type="text" name="name" placeholder="Name" aria-label="Your Name"
+                                class="sm:w-96 w-11/12 h-12 px-4 rounded-lg text-black text-xl" required>
+                            <input type="email" name="email" placeholder="Email" aria-label="Your Email"
+                                class="sm:w-96 w-11/12 h h-12 px-4 rounded-lg text-black text-xl" required>
+                            <textarea name="message" placeholder="Message" aria-label="Your Message"
+                                class="sm:w-96 w-11/12 h h-32 px-4 rounded-lg text-black text-xl" style="resize: none;"
+                                required></textarea>
+                            <button type="submit"
+                                class="sm:w-96 w-11/12 h h-12 px-4 rounded-lg bg-blue-950 text-white hover:bg-blue-900 transition">Send
                                 Message</button>
                         </div>
                     </div>

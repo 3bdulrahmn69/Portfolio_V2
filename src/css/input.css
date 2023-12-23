@@ -2,16 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --primaryColor: #11235a;
-  --secondaryColor: #607274;
-  --tertiaryColor: #c6cf9b;
-  --quaternaryColor: #f6eca9;
-  --textColor: #ffffff;
-}
-
 header {
-  background-color: #c70039;
+  background-color: #f86f03;
 }
 
 nav ul li {
@@ -29,43 +21,14 @@ nav ul li {
 }
 
 .progress {
-  background-color: #11235a;
-}
-
-main {
-  scroll-snap-type: y mandatory;
-  overflow-y: scroll;
-  height: 100vh;
+  background-color: #172554;
 }
 main::-webkit-scrollbar {
   width: 0%;
 }
-main section {
-  scroll-snap-align: start;
-  height: 100vh;
-  padding: 0 1rem;
-  overflow: hidden;
-}
 img {
   user-select: none;
   -webkit-user-drag: none;
-}
-
-section:nth-child(1) {
-  background-color: var(--primaryColor);
-  color: var(--textColor);
-}
-section:nth-child(2) {
-  background-color: var(--secondaryColor);
-  color: var(--textColor);
-}
-section:nth-child(3) {
-  background-color: var(--tertiaryColor);
-  color: var(--textColor);
-}
-section:nth-child(4) {
-  background-color: var(--quaternaryColor);
-  color: var(--textColor);
 }
 
 .card {
@@ -90,7 +53,7 @@ section:nth-child(4) {
   position: absolute;
   top: 0;
   left: 50%;
-  background-color: #c6cf9b;
+  background-color: #172554;
   color: #fff;
   padding: 10px 20px;
   font-size: 2rem;
@@ -137,13 +100,13 @@ section:nth-child(4) {
   opacity: 0.8;
 }
 .card a:nth-child(1) {
-  background-color: #c70039;
+  background-color: #172554;
 }
 .card a:nth-child(2) {
-  background-color: #11235a;
+  background-color: #f86f03;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 640px) {
   .card {
     width: 95%;
     height: 270px;
