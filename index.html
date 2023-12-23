@@ -3,6 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="author" content="Abdelrahman Moussa">
+    <meta name="description" content="My Portfolio">
+    <meta name="keywords" content="HTML,CSS,JavaScript,Frontend,Software">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.css"
         integrity="sha512-tx5+1LWHez1QiaXlAyDwzdBTfDjX07GMapQoFTS74wkcPMsI3So0KYmFe6EHZjI8+eSG0ljBlAQc3PQ5BTaZtQ=="
@@ -14,7 +17,7 @@
 
 <body class="flex sm:flex-row flex-col">
     <header
-        class="sm:w-1/12 w-4/12 h-screen sm:static absolute top-0 left-0 overflow-hidden sm:block hidden text-white">
+        class="sm:w-1/12 w-4/12 h-screen sm:static absolute top-0 left-0 overflow-hidden sm:block hidden text-white z-10">
         <nav class="w-full h-full">
             <ul class="w-full h-full flex flex-col items-center justify-center gap-32 text-2xl font-bold">
                 <li class="hover:opacity-80 px-2"><a href="#home">Home</a></li>
@@ -32,7 +35,7 @@
             <section id="home" aria-label="My Card" class="flex flex-col justify-center items-center gap-5">
                 <div class="border-2 rounded-lg p-2 flex items-center justify-center gap-3 sm:flex-row flex-col">
                     <div class="w-48 h-48">
-                        <img src="assets/icons/Mev-icon.png" alt="My Picture" class="w-full">
+                        <img src="assets/icons/Mev-icon.png" alt="My Picture" width="350" height="350">
                     </div>
                     <div class="flex flex-col sm:gap-2 gap-1 max-w-xl">
                         <h1 class="sm:text-4xl text-3xl">Abdelrahman Moussa</h1>
@@ -42,17 +45,17 @@
                     </div>
                 </div>
                 <div class="flex sm:gap-6 gap-3 justify-center items-center">
-                    <a href="https://abdulrahmn69.github.io/CV/" target="_blank"
+                    <a href="https://abdulrahmn69.github.io/CV/" target="_blank" aria-label="My CV"
                         class="text-2xl border-2 rounded-full sm:p-1 p-0 hover:opacity-80">CV</a>
-                    <a href="https://github.com/abdulrahmn69" target="_blank"><i
+                    <a href="https://github.com/abdulrahmn69" target="_blank" aria-label="My Github"><i
                             class="fa-brands fa-github fa-2xl hover:opacity-80"></i></a>
-                    <a href="https://www.linkedin.com/in/abdelrahman69/" target="_blank"><i
+                    <a href="https://www.linkedin.com/in/abdelrahman69/" target="_blank" aria-label="My Linkedin"><i
                             class="fa-brands fa-linkedin fa-2xl hover:opacity-80"></i></a>
-                    <a href="https://medium.com/@abdelrahman69" target="_blank"><i
+                    <a href="https://medium.com/@abdelrahman69" target="_blank" aria-label="My Medium"><i
                             class="fa-brands fa-medium fa-2xl hover:opacity-80"></i></a>
                     <a href="https://x.com/3bdulrahmn69" target="_blank"><i
                             class="fa-brands fa-x-twitter fa-2xl hover:opacity-80"></i></a>
-                    <a href="https://www.facebook.com/3bdulrahmn69" target="_blank"><i
+                    <a href="https://www.facebook.com/3bdulrahmn69" target="_blank" aria-label="My Facebook"><i
                             class="fa-brands fa-facebook fa-2xl hover:opacity-80"></i></a>
                 </div>
             </section>
@@ -176,33 +179,30 @@
                 </article>
 
             </section>
-
             <section id="my-works" aria-label="My Works"
-                class="flex sm:flex-row flex-col justify-center items-center gap-2">
-
+                class="flex sm:flex-row flex-col justify-center items-center py-2 sm:gap-4">
                 <div class="card">
                     <h3 class="text-center text-2xl">E-Store</h3>
                     <img src="assets/screenshots/EStore.png" alt="E-Store" class="w-full">
                     <p>HTML, CSS, JavaScript</p>
                     <div class="links">
-                        <a href="http://walidblog.tech/" target="_blank">Demo</a>
-                        <a href="https://github.com/abdulrahmn69/Estore" target="_blank">Code</a>
+                        <a href="http://walidblog.tech/" target="_blank">Live Demo</a>
+                        <a href="https://github.com/abdulrahmn69/Estore" target="_blank">GitHub Code</a>
                     </div>
                 </div>
-
                 <div class="card">
                     <h3 class="text-center text-2xl">Youtube Clone</h3>
                     <img src="assets/screenshots/Youtube.png" alt="Youtube" class="w-full">
                     <p>React js, CSS, Axios</p>
                     <div class="links">
-                        <a href="https://abdelrahman69-youtube.netlify.app/" target="_blank">Demo</a>
-                        <a href="https://github.com/abdulrahmn69/youtube_clone_v2" target="_blank">Code</a>
+                        <a href="https://abdelrahman69-youtube.netlify.app/" target="_blank">Live Demo</a>
+                        <a href="https://github.com/abdulrahmn69/youtube_clone_v2" target="_blank">GitHub Code</a>
                     </div>
                 </div>
-
             </section>
 
-            <section id=" contact-me" aria-label="Contact Me">
+            <section id="contact-me" aria-label="Contact Me">
+                <form action=""></form>
             </section>
         </main>
     </div>

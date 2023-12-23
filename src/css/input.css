@@ -86,7 +86,6 @@ section:nth-child(4) {
   gap: 1rem;
   position: relative;
 }
-
 .card h3 {
   position: absolute;
   top: 0;
@@ -110,8 +109,13 @@ section:nth-child(4) {
   font-size: 1.3rem;
 }
 .card img {
-  width: 100%;
+  width: 95%;
   height: 60%;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
 }
 .links {
   width: 100%;
@@ -137,4 +141,21 @@ section:nth-child(4) {
 }
 .card a:nth-child(2) {
   background-color: #11235a;
+}
+
+@media (max-width: 480px) {
+  .card {
+    width: 95%;
+    height: 270px;
+    margin-bottom: 10px;
+    gap: 3px;
+  }
+  .card h3 {
+    padding: 5px 10px;
+    font-size: 1.5rem;
+    text-wrap: nowrap;
+  }
+  .card p {
+    font-size: 1rem;
+  }
 }

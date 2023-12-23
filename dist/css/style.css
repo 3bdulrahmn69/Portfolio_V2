@@ -564,6 +564,10 @@ video {
   top: 1rem;
 }
 
+.z-10 {
+  z-index: 10;
+}
+
 .mx-16 {
   margin-left: 4rem;
   margin-right: 4rem;
@@ -940,8 +944,13 @@ section:nth-child(4) {
 }
 
 .card img {
-  width: 100%;
+  width: 95%;
   height: 60%;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
 }
 
 .links {
@@ -972,6 +981,25 @@ section:nth-child(4) {
 
 .card a:nth-child(2) {
   background-color: #11235a;
+}
+
+@media (max-width: 480px) {
+  .card {
+    width: 95%;
+    height: 270px;
+    margin-bottom: 10px;
+    gap: 3px;
+  }
+
+  .card h3 {
+    padding: 5px 10px;
+    font-size: 1.5rem;
+    text-wrap: nowrap;
+  }
+
+  .card p {
+    font-size: 1rem;
+  }
 }
 
 .hover\:opacity-80:hover {
@@ -1013,6 +1041,10 @@ section:nth-child(4) {
 
   .sm\:gap-2 {
     gap: 0.5rem;
+  }
+
+  .sm\:gap-4 {
+    gap: 1rem;
   }
 
   .sm\:gap-6 {
