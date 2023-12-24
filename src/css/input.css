@@ -4,11 +4,20 @@
 
 header {
   background-color: #f86f03;
-  transition: 1s;
-  -webkit-transition: 1s;
-  -moz-transition: 1s;
-  -ms-transition: 1s;
-  -o-transition: 1s;
+}
+.active {
+  font-size: 32px;
+  color: #172554;
+}
+.progress {
+  background-color: #172554;
+}
+main::-webkit-scrollbar {
+  width: 0%;
+}
+img {
+  user-select: none;
+  -webkit-user-drag: none;
 }
 
 nav ul li {
@@ -24,23 +33,6 @@ nav ul li {
   -ms-transition: 0.6s;
   -o-transition: 0.6s;
 }
-
-.active {
-  font-size: 32px;
-  color: #172554;
-}
-
-.progress {
-  background-color: #172554;
-}
-main::-webkit-scrollbar {
-  width: 0%;
-}
-img {
-  user-select: none;
-  -webkit-user-drag: none;
-}
-
 .card {
   width: 540px;
   height: 410px;

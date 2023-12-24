@@ -911,25 +911,6 @@ video {
 
 header {
   background-color: #f86f03;
-  transition: 1s;
-  -webkit-transition: 1s;
-  -moz-transition: 1s;
-  -ms-transition: 1s;
-  -o-transition: 1s;
-}
-
-nav ul li {
-  transform: rotate(-450deg);
-  -webkit-transform: rotate(-450deg);
-  -moz-transform: rotate(-450deg);
-  -ms-transform: rotate(-450deg);
-  -o-transform: rotate(-450deg);
-  text-wrap: nowrap;
-  transition: 0.6s;
-  -webkit-transition: 0.6s;
-  -moz-transition: 0.6s;
-  -ms-transition: 0.6s;
-  -o-transition: 0.6s;
 }
 
 .active {
@@ -950,6 +931,20 @@ img {
      -moz-user-select: none;
           user-select: none;
   -webkit-user-drag: none;
+}
+
+nav ul li {
+  transform: rotate(-450deg);
+  -webkit-transform: rotate(-450deg);
+  -moz-transform: rotate(-450deg);
+  -ms-transform: rotate(-450deg);
+  -o-transform: rotate(-450deg);
+  text-wrap: nowrap;
+  transition: 0.6s;
+  -webkit-transition: 0.6s;
+  -moz-transition: 0.6s;
+  -ms-transition: 0.6s;
+  -o-transition: 0.6s;
 }
 
 .card {
