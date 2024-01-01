@@ -1,7 +1,87 @@
 const bars = document.getElementById("bars");
 const header = document.querySelector("header");
-let navLinks = document.querySelectorAll("nav ul li");
-let Sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll("nav ul li");
+const Sections = document.querySelectorAll("section");
+const works = document.getElementById("works");
+
+const myWorks = [
+  {
+    name: "E-Store",
+    image: "assets/screenshots/EStore.png",
+    tools: "HTML, CSS, JavaScript",
+    demoLink: "http://walidblog.tech/",
+    codeLink: "https://github.com/3bdulrahmn69/Estore",
+  },
+  {
+    name: "Youtube Clone",
+    image: "assets/screenshots/Youtube.png",
+    tools: "React js, Axios, Material UI, Rapid API",
+    demoLink: "https://abdelrahman69-youtube.netlify.app/",
+    codeLink: "https://github.com/3bdulrahmn69/youtube_clone_v2",
+  },
+];
+
+if (window.location.href.includes("index.html")) {
+  myWorks.slice(-2).forEach((work) => {
+    createWorkCard(
+      work.name,
+      work.image,
+      work.tools,
+      work.demoLink,
+      work.codeLink
+    );
+  });
+} else if (window.location.href.includes("works.html")) {
+  myWorks.forEach((work) => {
+    createWorkCard(
+      work.name,
+      work.image,
+      work.tools,
+      work.demoLink,
+      work.codeLink
+    );
+  });
+} else {
+  console.log("---");
+}
+
+function createWorkCard(wName, wImage, wTools, dLink, gLink) {
+  const card = document.createElement("div");
+  card.classList.add("card");
+
+  const cardName = document.createElement("h3");
+  cardName.classList.add("text-center", "text-2xl", "text-nowrap");
+  cardName.innerText = wName;
+  card.appendChild(cardName);
+
+  const cardImage = document.createElement("img");
+  cardImage.classList.add("w-full");
+  cardImage.setAttribute("src", wImage);
+  cardImage.setAttribute("alt", wName);
+  card.appendChild(cardImage);
+
+  const cardTools = document.createElement("p");
+  cardTools.innerText = wTools;
+  card.appendChild(cardTools);
+
+  const cardLinks = document.createElement("div");
+  cardLinks.classList.add("links");
+  const cardDemoLink = document.createElement("a");
+  cardDemoLink.setAttribute("href", dLink);
+  cardDemoLink.setAttribute("target", "_blank");
+  cardDemoLink.innerText = "Live Demo";
+  cardLinks.appendChild(cardDemoLink);
+
+  const cardCodeLink = document.createElement("a");
+  cardCodeLink.setAttribute("href", gLink);
+  cardCodeLink.setAttribute("target", "_blank");
+  cardCodeLink.innerText = "GitHub Code";
+  cardLinks.appendChild(cardCodeLink);
+
+  card.appendChild(cardLinks);
+
+  works.appendChild(card);
+}
 
 bars.addEventListener("click", () => {
   if (header.classList.contains("hidden")) {

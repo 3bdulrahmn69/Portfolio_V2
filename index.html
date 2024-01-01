@@ -13,11 +13,12 @@
     <link rel="shortcut icon" href="assets/icons/Mev-icon.png" type="image/x-icon">
     <title>Abdulrahman Moussa</title>
     <link rel="stylesheet" href="dist/css/style.css">
+    <script defer src="dist/js/main.js"></script>
 </head>
 
-<body class="flex sm:flex-row flex-col">
+<body class="flex lg:flex-row flex-col">
     <header
-        class="sm:w-1/12 w-4/12 h-screen sm:static absolute top-0 left-0 overflow-hidden sm:block hidden text-white z-10">
+        class="lg:w-1/12 w-4/12 h-screen lg:static absolute top-0 left-0 overflow-hidden lg:block hidden text-white z-10">
         <nav class="w-full h-full">
             <ul class="w-full h-full flex flex-col items-center justify-center gap-32 text-2xl font-bold">
                 <li class="hover:opacity-80 px-2 active" data-link="home"><a href="#home">Home</a></li>
@@ -27,10 +28,10 @@
             </ul>
         </nav>
     </header>
-    <div class="absolute right-1 top-4 w-10 h-10 sm:hidden flex text-3xl text-white" id="bars">
+    <div class="absolute right-1 top-4 w-10 h-10 lg:hidden flex text-3xl text-white" id="bars">
         <i class="fa-solid fa-bars"></i>
     </div>
-    <div class="sm:w-11/12 w-12/12">
+    <div class="lg:w-11/12 w-12/12">
         <main class="h-screen overflow-y-scroll snap-y snap-mandatory">
             <section id="home" aria-label="My Card"
                 class="flex flex-col justify-center items-center gap-5 bg-blue-950 text-white h-screen overflow-hidden px-4 snap-start">
@@ -47,17 +48,17 @@
                 </div>
                 <div class="flex sm:gap-6 gap-3 justify-center items-center">
                     <a href="https://3bdulrahmn69.github.io/CV/" target="_blank" aria-label="My CV"
-                        class="text-2xl border-2 rounded-full sm:p-1 p-0 hover:opacity-80">CV</a>
+                        class="text-2xl border-2 rounded-full sm:p-1 p-0 hover:opacity-80 duration-300">CV</a>
                     <a href="https://github.com/3bdulrahmn69" target="_blank" aria-label="My Github"><i
-                            class="fa-brands fa-github fa-2xl hover:opacity-80"></i></a>
+                            class="fa-brands fa-github fa-2xl opacity-80 hover:opacity-100 duration-300"></i></a>
                     <a href="https://www.linkedin.com/in/3bdulrahmn69/" target="_blank" aria-label="My Linkedin"><i
-                            class="fa-brands fa-linkedin fa-2xl hover:opacity-80"></i></a>
+                            class="fa-brands fa-linkedin fa-2xl opacity-80 hover:opacity-100 hover:text-blue-500 duration-300"></i></a>
                     <a href="https://medium.com/@3bdulrahmn69" target="_blank" aria-label="My Medium"><i
-                            class="fa-brands fa-medium fa-2xl hover:opacity-80"></i></a>
+                            class="fa-brands fa-medium fa-2xl opacity-80 hover:opacity-100 hover:text-black duration-300"></i></a>
                     <a href="https://x.com/3bdulrahmn69" target="_blank" aria-label="My X"><i
-                            class="fa-brands fa-x-twitter fa-2xl hover:opacity-80"></i></a>
+                            class="fa-brands fa-x-twitter fa-2xl opacity-80 hover:opacity-100 hover:text-black duration-300"></i></a>
                     <a href="https://www.facebook.com/3bdulrahmn69" target="_blank" aria-label="My Facebook"><i
-                            class="fa-brands fa-facebook fa-2xl hover:opacity-80"></i></a>
+                            class="fa-brands fa-facebook fa-2xl opacity-80 hover:opacity-100 hover:text-blue-600 duration-300"></i></a>
                 </div>
             </section>
             <section id="about-me" aria-label="About Me"
@@ -177,25 +178,14 @@
                 </article>
             </section>
             <section id="my-works" aria-label="My Works"
-                class="flex sm:flex-row flex-col justify-center items-center py-2 sm:gap-4 bg-blue-800 text-white h-screen overflow-hidden px-4 snap-start">
-                <div class="card">
-                    <h3 class="text-center text-2xl text-nowrap">E-Store</h3>
-                    <img src="assets/screenshots/EStore.png" alt="E-Store" class="w-full">
-                    <p>HTML, CSS, JavaScript</p>
-                    <div class="links">
-                        <a href="http://walidblog.tech/" target="_blank">Live Demo</a>
-                        <a href="https://github.com/abdulrahmn69/Estore" target="_blank">GitHub Code</a>
-                    </div>
+                class="flex flex-col justify-center items-center py-2 sm:gap-3 gap-1 bg-blue-800 text-white h-screen overflow-hidden px-4 snap-start">
+                <h2 class="sm:text-6xl text-4xl uppercase tracking-widest text-nowrap">Latest Works</h2>
+                <div id="works"
+                    class="flex sm:flex-row flex-col justify-center items-center py-2 sm:gap-4 bg-blue-800 text-white">
                 </div>
-                <div class="card">
-                    <h3 class="text-center text-2xl text-nowrap">Youtube Clone</h3>
-                    <img src="assets/screenshots/Youtube.png" alt="Youtube" class="w-full">
-                    <p>React js, Axios, Material UI, Rapid API</p>
-                    <div class="links">
-                        <a href="https://abdelrahman69-youtube.netlify.app/" target="_blank">Live Demo</a>
-                        <a href="https://github.com/abdulrahmn69/youtube_clone_v2" target="_blank">GitHub Code</a>
-                    </div>
-                </div>
+                <a href="works.html"
+                    class="flex items-center justify-center uppercase tracking-widest gap-2 hover:gap-7 duration-300">All
+                    Works <i class="fa-solid fa-arrow-right-long"></i></a>
             </section>
             <section id="contact-me" aria-label="Contact Me"
                 class="flex justify-center flex-col gap-2 items-center bg-blue-700 text-white h-screen overflow-hidden px-4 snap-start">
@@ -213,17 +203,16 @@
                                 class="sm:w-96 w-11/12 h h-32 px-4 py-1 rounded-lg text-black text-xl"
                                 style="resize: none;" required></textarea>
                             <button type="submit"
-                                class="sm:w-96 w-11/12 h h-12 px-4 rounded-lg bg-blue-950 text-white hover:bg-blue-900 transition">Send
+                                class="sm:w-96 w-11/12 h h-12 px-4 rounded-lg bg-blue-950 text-white hover:bg-blue-900 transition duration-300">Send
                                 Message</button>
                         </div>
                     </div>
                 </form>
                 <p>Check Out my previous <a href="https://3bdulrahmn69.github.io/Portfolio/"
-                        class="text-blue-950 uppercase hover:opacity-80 ml-2">Portfolio</a></p>
+                        class="text-orange-500 uppercase hover:opacity-80 ml-2">Portfolio</a></p>
             </section>
         </main>
     </div>
-    <script src="dist/js/main.js"></script>
 </body>
 
 </html>
