@@ -21,17 +21,7 @@ const myWorks = [
   },
 ];
 
-if (window.location.href.includes("index.html")) {
-  myWorks.slice(-2).forEach((work) => {
-    createWorkCard(
-      work.name,
-      work.image,
-      work.tools,
-      work.demoLink,
-      work.codeLink
-    );
-  });
-} else if (window.location.href.includes("works.html")) {
+if (window.location.href.includes("works")) {
   myWorks.forEach((work) => {
     createWorkCard(
       work.name,
@@ -42,7 +32,15 @@ if (window.location.href.includes("index.html")) {
     );
   });
 } else {
-  console.log("---");
+  myWorks.slice(-2).forEach((work) => {
+    createWorkCard(
+      work.name,
+      work.image,
+      work.tools,
+      work.demoLink,
+      work.codeLink
+    );
+  });
 }
 
 function createWorkCard(wName, wImage, wTools, dLink, gLink) {
